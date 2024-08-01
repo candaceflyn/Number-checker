@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrix Input Form</title>
+</head>
+<body>
+    <h2>Enter Integers for Matrix:</h2>
+    <form action="#" onsubmit="return false;" id="matrixForm">
+        <input type="hidden" name="size" th:value="${size}">
+        <div id="matrixInputs"></div>
+        <button type="button" onclick="generateMatrix()">Submit</button>
+    </form>
+    <script>
+        function generateMatrix() {
+            const size = document.querySelector('input[name="size"]').value;
+            let matrixInputsHtml = '';
+            for (let i = 0; i < size; i++) {
+                for (let j = 0; j < size; j++) {
+                    matrixInputsHtml += `<input type="number" name="matrix[${i}][${j}]" required>`;
+                }
+                matrixInputsHtml += '<br>';
+            }
+            document.getElementById('matrixInputs').innerHTML = matrixInputsHtml;
+        }
+    </script>
+</body>
+</html>

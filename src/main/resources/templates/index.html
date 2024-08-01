@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Checker</title>
+<style>
+	div{
+		text-align: center;
+		margin-top: 20px;
+	}
+</style>
+</head>
+<body>
+	<div style="text-align: center;" class="container">
+    <h2>Enter a Number to Check if it's Circular Prime:</h2>
+    <form action="/checkCircularPrime" method="post">
+        <input type="number" name="number" id="number" required>
+        <button type="submit">Check</button>
+    </form>
+    <div id="result" class="result-container"></div>
+    </div>
+    
+    <div style="text-align: center;" class="container">
+    <h2>Enter a Number to Check if it's Pronic Number:</h2>
+    <form action="/checkPronic" method="post">
+        <input type="number" name="number" id="number" required>
+        <button type="submit">Check</button>
+    </form>
+    <div id="result" class="result-container"></div>
+    </div>
+    
+    <div style="text-align: center;" class="container">
+    <h2>Enter a Number to Check if it's Disarium Number:</h2>
+    <form action="/checkDisarium" method="post">
+        <input type="number" name="number" id="number" required>
+        <button type="submit">Check</button>
+    </form>
+    <div id="result" class="result-container"></div>
+    </div>
+    
+    <div style="text-align: center;" class="container">
+    <h2>Enter limit for Fibonacci Series:</h2>
+    <form action="/generateFibo" method="post">
+        <input type="number" name="limit" id="limit" required>
+        <button type="submit">Generate Fibonacci Series</button>
+    </form>
+    <div id="fibonacci-series" class="result-container"></div>
+    </div>
+        <div style="text-align: center;" class="container">
+    <h2>Enter Amount:</h2>
+    <form action="/calculateDenomination" method="post">
+        <input type="number" name="amount" required>
+        <button type="submit">Calculate Denomination</button>
+    </form>
+    </div>
+        
+            <div style="text-align: center;" class="container">
+    <h2>Enter a Number:</h2>
+    <form action="/checkPalindrome" method="post">
+        <input type="number" name="number" required>
+        <button type="submit">Check Palindrome</button>
+    </form>
+    </div>
+    
+    <div style="text-align: center;" class="container">
+		<h2>Enter Two Numbers:</h2>
+		<form action="/primePalindrome" method="post">
+			<input type="number" name="start" placeholder="Start number" required>
+			<input type="number" name="end" placeholder="End number" required>
+			<button type="submit">Find Prime Palindromes</button>			
+		</form>	
+	</div>
+	
+	    <div style="text-align: center;" class="container">
+		<h2>Enter Size for Square Matrix:</h2>
+    <form action="/generateMatrix" method="post">
+        <input type="number" name="size" required>
+        <button type="submit">Submit</button>
+    </form>
+    </div>
+	
+		
+</body>
+</html>

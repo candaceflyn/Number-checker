@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Palindrome Integer</title>
+</head>
+<body>
+    <h2>Prime Palindrome between 
+	<span th:text="${start}"></span>
+    and
+    <span th:text="${end}"></span>
+    </h2>
+    <ul>
+		<li th:each="primePalindrome:${primePalindromes}" th:text="${primePalindrome}"></li>
+	</ul>
+</body>
+</html>

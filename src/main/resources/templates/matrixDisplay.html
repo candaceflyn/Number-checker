@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrix Display</title>
+</head>
+<body>
+    <h2>Matrix:</h2>
+    <table border="1">
+        <tbody>
+            <tr th:each="row, iStat : ${matrix}">
+                <td th:each="cell, jStat : ${row}" th:text="${cell}"></td>
+            </tr>
+        </tbody>
+    </table>
+</html>

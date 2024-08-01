@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome Check Result</title>
+</head>
+<body>
+    <h2>Palindrome Check Result:</h2>
+    <p th:if="${isPalindrome}">
+        Number <span th:text="${number}"></span> is a Palindrome.
+    </p>
+    <p th:if="${not isPalindrome}">
+        Number <span th:text="${number}"></span> is not a Palindrome.
+    </p>
+    <pre>
+A palindromic number (also known as a numeral palindrome or a numeric palindrome) is a number (such as 16461) that remains the same when its digits are reversed.
+In other words, it has reflectional symmetry across a vertical axis.
+	</pre>
+</body>
+</html>
